@@ -1,0 +1,34 @@
+{
+  "name": "base16-eighties-dark-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "Dark theme, based on base16-eighties",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josler/atom-base16-eighties-syntax"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# base16-eighties-dark-syntax theme\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/josler/atom-base16-eighties-syntax/issues"
+  },
+  "homepage": "https://github.com/josler/atom-base16-eighties-syntax",
+  "_id": "base16-eighties-dark-syntax@0.1.0",
+  "_shasum": "94fc03f45f6f3ef963bf33dcb3397ffa4eccea72",
+  "_resolved": "file:../d-115713-1265-v75o15/package.tgz",
+  "_from": "../d-115713-1265-v75o15/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
