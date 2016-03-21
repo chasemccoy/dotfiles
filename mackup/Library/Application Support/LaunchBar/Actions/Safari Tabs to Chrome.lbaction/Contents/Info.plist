@@ -1,0 +1,40 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>TabTemplate</string>
+	<key>CFBundleName</key>
+	<string>Safari Tabs to Chrome</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.veritrope.action.SafariTabs.ChromeTabs</string>
+	<key>LBAssociatedApplication</key>
+	<string>com.apple.Safari</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBScriptName</key>
+			<string>default.scpt</string>
+			<key>LBReturnsResult</key>
+			<false/>
+			<key>LBRunInBackground</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBSummary</key>
+		<string>Open all Safari tabs in Google Chrome.</string>
+		<key>LBAuthor</key>
+		<string>Justin Lancy</string>
+		<key>LBWebsite</key>
+		<string>http://veritrope.com/</string>
+		<key>LBTwitter</key>
+		<string>@Veritrope</string>
+	</dict>
+</dict>
+</plist>

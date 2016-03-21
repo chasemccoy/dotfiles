@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fulltextindexer.maxobjectid</key>
+	<integer>17673</integer>
+	<key>fulltextindexer.typeversions</key>
+	<dict>
+		<key>201</key>
+		<integer>0</integer>
+		<key>202</key>
+		<integer>0</integer>
+		<key>60</key>
+		<integer>0</integer>
+		<key>61</key>
+		<integer>0</integer>
+		<key>64</key>
+		<integer>0</integer>
+		<key>68</key>
+		<integer>0</integer>
+	</dict>
+	<key>fulltextindexer.version</key>
+	<integer>2</integer>
+</dict>
+</plist>
