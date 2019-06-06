@@ -16,7 +16,6 @@ yarn-error.log
 # Over-arching stuff
 *.ignored/
 *.ignored.*
-.nvmrc
 
 # git
 *.patch
