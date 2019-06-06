@@ -3,7 +3,11 @@ shortener () {
   pushd ~/Repositories/shortener/ && yarn run shorten $1 $2 && popd
 }
 
-killport() { lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill -9 ;}
+killport () { lsof -i tcp:"$*" | awk 'NR!=1 {print $2}' | xargs kill -9 ;}
+
+cdr () {
+	cd ~/Repositories/$1
+}
 
 # Aliases
 alias ..="cd ..";
