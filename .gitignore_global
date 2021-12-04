@@ -1,3 +1,6 @@
+# Add this to ~/.gitignore and then run:
+# git config --global core.excludesfile ~/.gitignore
+
 # Mac
 .DS_Store
 
