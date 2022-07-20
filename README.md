@@ -23,6 +23,10 @@
 
 ---
 
-## `.gitignore_global`
+### `.gitignore_global`
 
 Copy into `~/.gitignore` and then run `git config --global core.excludesfile ~/.gitignore`
+
+### Starship
+
+Copy `starship.toml` to the `~/.config` folder
