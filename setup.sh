@@ -23,10 +23,16 @@ brew install git
 brew install imagemagick
 brew install node
 brew install yarn
-brew install imageoptim
 brew install the-unarchiver
 
 # Apps
+brew install --cask imageoptim
+brew install --cask 1password
+brew install --cask figma
+brew install --cask google-chrome
+brew install --cask tower
+brew install --cask visual-studio-code
+brew install --cask spotify
 mas install 775737590  # iA Writer
 mas install 904280696  # Things
 mas install 1529448980 # Reeder
