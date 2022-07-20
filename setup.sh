@@ -24,6 +24,7 @@ brew install imagemagick
 brew install node
 brew install yarn
 brew install the-unarchiver
+brew install starship
 
 # Apps
 brew install --cask imageoptim
