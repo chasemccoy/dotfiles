@@ -1,10 +1,6 @@
 # dotfiles
 
-## `.gitignore_global`
-
-Copy into `~/.gitignore` and then run `git config --global core.excludesfile ~/.gitignore`
-
-## Setting up your Mac
+## Setting up a new Mac
 
 1. Update macOS to the latest version through system preferences
 2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
@@ -24,3 +20,9 @@ Copy into `~/.gitignore` and then run `git config --global core.excludesfile ~/.
     ```zsh
     ~/Repositories/dotfiles/setup.sh
     ```
+
+---
+
+## `.gitignore_global`
+
+Copy into `~/.gitignore` and then run `git config --global core.excludesfile ~/.gitignore`
