@@ -14,6 +14,7 @@ fi
 brew update
 
 brew tap homebrew/bundle
+brew tap homebrew/cask
 
 # Binaries
 brew install gh
@@ -29,4 +30,3 @@ brew install the-unarchiver
 
 # Create a Repositories directory
 mkdir $HOME/Repositories
-
