@@ -31,6 +31,7 @@ mas install 775737590  # iA Writer
 mas install 904280696  # Things
 mas install 1529448980 # Reeder
 mas install 1289583905 # Pixelmator
+mas install 692867256  # Simplenote
 
 # Create a Repositories directory
 mkdir $HOME/Repositories
