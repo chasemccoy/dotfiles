@@ -10,20 +10,17 @@ Copy into `~/.gitignore` and then run `git config --global core.excludesfile ~/.
 2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
 
    ```zsh
-   curl https://raw.githubusercontent.com/driesvints/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
+   curl https://raw.githubusercontent.com/chasemccoy/dotfiles/HEAD/ssh.sh | sh -s "chasem000@gmail.com"
    ```
 
-3. Clone this repo to `~/.dotfiles` with:
+3. Clone this repo to `~/Repositories/dotfiles` with:
 
     ```zsh
-    git clone --recursive git@github.com:driesvints/dotfiles.git ~/.dotfiles
+    git clone --recursive git@github.com:chasemccoy/dotfiles.git ~/Repositories/dotfiles
     ```
 
 4. Run the installation with:
 
     ```zsh
-    ~/.dotfiles/fresh.sh
+    ~/Repositories/dotfiles/setup.sh
     ```
-
-5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-6. Restart your computer to finalize the process
