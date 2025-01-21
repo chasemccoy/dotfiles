@@ -11,7 +11,6 @@ fi
 brew update
 
 brew tap homebrew/bundle
-brew tap homebrew/cask
 
 # Binaries
 brew install mas
