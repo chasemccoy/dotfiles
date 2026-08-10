@@ -43,3 +43,8 @@ concierge.chsmc.tools {
 	reverse_proxy http://localhost:8100
 	import cloudflare
 }
+
+tabs.chsmc.tools {
+	reverse_proxy http://localhost:5003
+	import cloudflare
+}
