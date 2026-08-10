@@ -1,0 +1,45 @@
+(cloudflare) {
+	tls {
+		dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+	}
+}
+
+lab.chsmc.tools {
+	reverse_proxy http://localhost:2000
+	import cloudflare
+}
+
+launchpad.chsmc.tools {
+	reverse_proxy http://localhost:5002
+	import cloudflare
+}
+
+api.chsmc.tools {
+	reverse_proxy http://localhost:5001
+	import cloudflare
+}
+
+enchiridion.chsmc.tools {
+	reverse_proxy http://localhost:3456
+	import cloudflare
+}
+
+enchiridion-api.chsmc.tools {
+	reverse_proxy http://localhost:4321
+	import cloudflare
+}
+
+trailmix.chsmc.tools {
+	reverse_proxy http://localhost:6202
+	import cloudflare
+}
+
+trailmix-api.chsmc.tools {
+	reverse_proxy http://localhost:6201
+	import cloudflare
+}
+
+concierge.chsmc.tools {
+	reverse_proxy http://localhost:8100
+	import cloudflare
+}
