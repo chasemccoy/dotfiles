@@ -54,3 +54,13 @@ archive.chsmc.tools {
 	file_server browse
 	import cloudflare
 }
+
+familiar.chsmc.tools {
+	# Tailnet only: refuse anything that didn't come over Tailscale. No encode: the event stream must not be compressed.
+	@outside not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48
+	respond @outside 403
+	reverse_proxy http://127.0.0.1:4848 {
+		flush_interval -1
+	}
+	import cloudflare
+}
