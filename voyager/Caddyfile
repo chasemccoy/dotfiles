@@ -55,6 +55,19 @@ archive.chsmc.tools {
 	import cloudflare
 }
 
+# iOS builds from ios-ship (scripts/skills/ios-ship): install pages, manifests and .ipa files.
+builds.chsmc.tools {
+	root * /Users/voyager/ios-builds/www
+	@manifest path *.plist
+	header @manifest Content-Type "text/xml; charset=utf-8"
+	@ipa path *.ipa
+	header @ipa Content-Type "application/octet-stream"
+	@log path *.log
+	header @log Content-Type "text/plain; charset=utf-8"
+	file_server
+	import cloudflare
+}
+
 familiar.chsmc.tools {
 	# Tailnet only: refuse anything that didn't come over Tailscale. No encode: the event stream must not be compressed.
 	@outside not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48
