@@ -67,6 +67,8 @@ module.exports = {
       script: 'pnpm start',
       interpreter: 'none',
       env: {
+        // pnpm, then Homebrew's node (24+, for TypeScript type stripping) ahead of nvm's 18 from the pm2 plist.
+        PATH: '/Users/voyager/Library/pnpm:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
         PORT: '5004',
         ARTIFACTS_SYNC: '1',
       },
