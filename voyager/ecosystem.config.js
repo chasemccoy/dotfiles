@@ -60,6 +60,18 @@ module.exports = {
       interpreter: 'none',
     },
     {
+      // Archive of agent-made HTML artifacts. ARTIFACTS_SYNC: pulls the library from GitHub every minute (and when
+      // the artifacts CLI pings it), and commits and pushes edits made in the gallery.
+      name: 'artifacts',
+      cwd: '/Users/voyager/Repositories/artifacts',
+      script: 'pnpm start',
+      interpreter: 'none',
+      env: {
+        PORT: '5004',
+        ARTIFACTS_SYNC: '1',
+      },
+    },
+    {
       // familiar, Chase's agent, serving the familiar apps (docs/VOYAGER.md in the familiar repo).
       // No secrets here: the API key is in the familiar repo's .env, the apps' token in ~/.familiar/token.
       name: 'familiar',
