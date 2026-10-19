@@ -90,6 +90,24 @@ module.exports = {
         PNPM_HOME: '/Users/voyager/Library/pnpm',
         FAMILIAR_PORT: '4848',
       },
+    },
+    {
+      // Faulkner's per-post chat with Claude (faulkner-ios/Server, PROTOCOL.md there). No secrets here: the API key
+      // is in Server/.env (mode 600). Its data is ~/.faulkner-chat (chat.db and the Agent SDK's sessions). Claude reads
+      // ~/.claude/CLAUDE.md and ~/.claude/skills, i.e. ~/Repositories/scripts: pull that for current skills.
+      name: 'faulkner-chat',
+      cwd: '/Users/voyager/Repositories/faulkner-ios/Server',
+      script: 'pnpm start',
+      interpreter: 'none',
+      kill_timeout: 10000, // a running turn is ended (failed, "restarted") before the process exits
+      exp_backoff_restart_delay: 2000,
+      time: true,
+      env: {
+        // node 24 first (Homebrew's is 25): type stripping and node:sqlite.
+        PATH: '/Users/voyager/.nvm/versions/node/v24.13.0/bin:/Users/voyager/Library/pnpm:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
+        PNPM_HOME: '/Users/voyager/Library/pnpm',
+        FAULKNER_CHAT_PORT: '4850',
+      },
     }
   ],
 }
