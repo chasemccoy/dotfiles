@@ -86,6 +86,14 @@ familiar.chsmc.tools {
 	import cloudflare
 }
 
+faulkner.chsmc.tools {
+	# Faulkner's web app (vite dev on 1897). Tailnet only: it commits and pushes to the public blog.
+	@outside not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48
+	respond @outside 403
+	reverse_proxy localhost:1897
+	import cloudflare
+}
+
 faulkner-chat.chsmc.tools {
 	# Faulkner's chat service. Tailnet only: refuse anything that didn't come over Tailscale. No encode: the event
 	# stream must not be compressed.

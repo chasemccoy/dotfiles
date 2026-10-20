@@ -92,11 +92,11 @@ module.exports = {
       },
     },
     {
-      // Faulkner's per-post chat with Claude (faulkner-ios/Server, PROTOCOL.md there). No secrets here: the API key
+      // Faulkner's per-post chat with Claude (faulkner/Server, PROTOCOL.md there). No secrets here: the API key
       // is in Server/.env (mode 600). Its data is ~/.faulkner-chat (chat.db and the Agent SDK's sessions). Claude reads
       // ~/.claude/CLAUDE.md and ~/.claude/skills, i.e. ~/Repositories/scripts: pull that for current skills.
       name: 'faulkner-chat',
-      cwd: '/Users/voyager/Repositories/faulkner-ios/Server',
+      cwd: '/Users/voyager/Repositories/faulkner/Server',
       script: 'pnpm start',
       interpreter: 'none',
       kill_timeout: 10000, // a running turn is ended (failed, "restarted") before the process exits
@@ -107,6 +107,23 @@ module.exports = {
         PATH: '/Users/voyager/.nvm/versions/node/v24.13.0/bin:/Users/voyager/Library/pnpm:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
         PNPM_HOME: '/Users/voyager/Library/pnpm',
         FAULKNER_CHAT_PORT: '4850',
+      },
+    },
+    {
+      // Faulkner's web app (faulkner/apps/web, SvelteKit under vite dev, as it's meant to run: its CSRF hook in
+      // hooks.server.ts is load-bearing). It edits its own clone of the blog, ~/faulkner-blog (not ~/Repositories/www,
+      // the preview's), committing and pushing over SSH. Its API key for drafting comes from the chat service's .env.
+      name: 'faulkner-web',
+      cwd: '/Users/voyager/Repositories/faulkner/apps/web',
+      script: '/bin/bash',
+      args: ['-c', 'set -a; . /Users/voyager/Repositories/faulkner/Server/.env; set +a; exec pnpm dev'],
+      interpreter: 'none',
+      exp_backoff_restart_delay: 2000,
+      time: true,
+      env: {
+        PATH: '/Users/voyager/.nvm/versions/node/v24.13.0/bin:/Users/voyager/Library/pnpm:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
+        PNPM_HOME: '/Users/voyager/Library/pnpm',
+        FAULKNER_REPO: '/Users/voyager/faulkner-blog',
       },
     }
   ],
