@@ -53,13 +53,6 @@ module.exports = {
       ignore_watch: ['node_modules', 'app/dist'],
     },
     {
-      name: 'arc-tabs',
-      port: 5003,
-      cwd: '/Users/voyager/Repositories/arc-tabs',
-      script: 'npm run start',
-      interpreter: 'none',
-    },
-    {
       // Archive of agent-made HTML artifacts. ARTIFACTS_SYNC: pulls the library from GitHub every minute (and when
       // the artifacts CLI pings it), and commits and pushes edits made in the gallery.
       name: 'artifacts',
