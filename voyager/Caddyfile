@@ -15,6 +15,9 @@ launchpad.chsmc.tools {
 }
 
 api.chsmc.tools {
+	# voyager-api: reads and writes the Log in the vault. Tailnet only.
+	@outside not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48
+	respond @outside 403
 	reverse_proxy http://localhost:5001
 	import cloudflare
 }
