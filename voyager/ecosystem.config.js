@@ -118,6 +118,21 @@ module.exports = {
         PNPM_HOME: '/Users/voyager/Library/pnpm',
         FAULKNER_REPO: '/Users/voyager/faulkner-blog',
       },
+    },
+    {
+      // Receiver for the Stream ring's webhook (stream-hook repo, README there). Zero dependencies, so plain node 24
+      // (import.meta.dirname, process.loadEnvFile). Unsigned, since it's tailnet only (README covers turning signing on).
+      // Captures are kept in data/interactions.jsonl there.
+      name: 'stream-hook',
+      cwd: '/Users/voyager/Repositories/stream-hook',
+      script: '/Users/voyager/.nvm/versions/node/v24.13.0/bin/node',
+      args: 'server.js',
+      interpreter: 'none',
+      exp_backoff_restart_delay: 2000,
+      time: true,
+      env: {
+        PORT: '4860',
+      },
     }
   ],
 }

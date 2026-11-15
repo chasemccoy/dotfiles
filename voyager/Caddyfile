@@ -99,3 +99,14 @@ faulkner-chat.chsmc.tools {
 	}
 	import cloudflare
 }
+
+stream.chsmc.tools {
+	# Stream ring webhook receiver (stream-hook). Tailnet only: Stream posts from the iPhone itself, over Tailscale. No
+	# encode: the live view is an event stream.
+	@outside not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48
+	respond @outside 403
+	reverse_proxy http://127.0.0.1:4860 {
+		flush_interval -1
+	}
+	import cloudflare
+}
