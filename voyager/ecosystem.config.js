@@ -122,7 +122,8 @@ module.exports = {
     {
       // Receiver for the Stream ring's webhook (stream-hook repo, README there), run by plain node 24 (import.meta.dirname,
       // process.loadEnvFile). `pnpm install` after a pull: Claude screens misfires (Anthropic SDK; ANTHROPIC_API_KEY
-      // from pm2's environment), and the rest go to the Log via voyager-api on 5001. Unsigned, since it's tailnet only.
+      // from pm2's environment), shopping lists go to 🛒 Shopping in Things (via /opt/homebrew/bin/things, under this
+      // node's automation grant), and the rest go to the Log via voyager-api on 5001. Unsigned, since it's tailnet only.
       // Captures are kept in data/interactions.jsonl there.
       name: 'stream-hook',
       cwd: '/Users/voyager/Repositories/stream-hook',
